@@ -1,3 +1,8 @@
+# heres what all this is referencing
+# https://keras.io/examples/vision/image_classification_efficientnet_fine_tuning/
+
+
+
 """
 Title: Image classification via fine-tuning with EfficientNet
 Author: [Yixing Fu](https://github.com/yixingfu)
