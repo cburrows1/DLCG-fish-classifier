@@ -47,23 +47,23 @@ validation_ds = tf.data.Dataset.from_generator(
 )
 
 
-# data_augmentation = keras.Sequential(
-#     [layers.RandomFlip("horizontal"), layers.RandomRotation(0.1),]
-# )
+data_augmentation = keras.Sequential(
+    [layers.RandomFlip("horizontal"), layers.RandomRotation(0.1),]
+)
 
 
-# for images, labels in train_ds.take(1):
-#     plt.figure(figsize=(10, 10))
-#     first_image = images[0]
-#     for i in range(9):
-#         ax = plt.subplot(3, 3, i + 1)
-#         augmented_image = data_augmentation(
-#             tf.expand_dims(first_image, 0), training=True
-#         )
-#         plt.imshow(augmented_image[0].numpy().astype("int32"))
-#         plt.title(int(labels[0]))
-#         plt.axis("off")
-# plt.show()
+for images, labels in train_ds.take(1):
+    plt.figure(figsize=(10, 10))
+    first_image = images[0]
+    for i in range(9):
+        ax = plt.subplot(3, 3, i + 1)
+        augmented_image = data_augmentation(
+            tf.expand_dims(first_image, 0), training=True
+        )
+        plt.imshow(augmented_image[0].numpy().astype("int32"))
+        plt.title(int(labels[0]))
+        plt.axis("off")
+plt.show()
 
 
 base_model = keras.applications.Xception(
@@ -77,8 +77,7 @@ base_model.trainable = False
 
 # Create new model on top
 inputs = keras.Input(shape=(150, 150, 3))
-# x = data_augmentation(inputs)  # Apply random data augmentation
-x = inputs
+x = data_augmentation(inputs)  # Apply random data augmentation
 
 # Pre-trained Xception weights requires that input be scaled
 # from (0, 255) to a range of (-1., +1.), the rescaling layer
