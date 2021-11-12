@@ -12,24 +12,39 @@ import os
 _URL = 'https://storage.googleapis.com/mledu-datasets/cats_and_dogs_filtered.zip'
 zip_path = tf.keras.utils.get_file("cats_and_dogs.zip", _URL, extract=True)
 
-img_gen = tf.keras.preprocessing.image.ImageDataGenerator(rescale=1./255, rotation_range=20)
+img_gen = tf.keras.preprocessing.image.ImageDataGenerator()
 
 cvd_ds = os.path.join(os.path.dirname(zip_path), "cats_and_dogs_filtered")
 
-train_dir = os.path.join(cvd_ds, 'train')
-validation_dir = os.path.join(cvd_ds, 'validation')
 
 BATCH_SIZE = 32
 IMG_SIZE = (150, 150)
 
-train_ds = tf.keras.utils.image_dataset_from_directory(train_dir,
-                                                            shuffle=True,
-                                                            batch_size=BATCH_SIZE,
-                                                            image_size=IMG_SIZE)
-validation_ds = tf.keras.utils.image_dataset_from_directory(validation_dir,
-                                                                 shuffle=True,
-                                                                 batch_size=BATCH_SIZE,
-                                                                 image_size=IMG_SIZE)
+train_dir = os.path.join(cvd_ds, 'train')
+validation_dir = os.path.join(cvd_ds, 'validation')
+
+def image_flow(path):
+    return img_gen.flow_from_directory(path,
+                                target_size=IMG_SIZE,
+                                batch_size=BATCH_SIZE,
+                                shuffle=True,
+                                class_mode='binary',
+                                color_mode='rgb'
+                                )
+
+train_ds = tf.data.Dataset.from_generator(
+    lambda: image_flow(train_dir), 
+    output_signature=(
+        tf.TensorSpec(shape=(32,150,150,3), dtype=tf.int32),
+        tf.TensorSpec(shape=(32,), dtype=tf.int32))
+)
+
+validation_ds = tf.data.Dataset.from_generator(
+    lambda: image_flow(validation_dir),
+    output_signature=(
+        tf.TensorSpec(shape=(32,150,150,3), dtype=tf.int32),
+        tf.TensorSpec(shape=(32,), dtype=tf.int32))
+)
 
 
 data_augmentation = keras.Sequential(
@@ -48,6 +63,7 @@ for images, labels in train_ds.take(1):
         plt.imshow(augmented_image[0].numpy().astype("int32"))
         plt.title(int(labels[0]))
         plt.axis("off")
+plt.show()
 
 
 base_model = keras.applications.Xception(
