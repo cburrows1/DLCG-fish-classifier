@@ -10,11 +10,14 @@ import os
 
 
 _URL = 'https://storage.googleapis.com/mledu-datasets/cats_and_dogs_filtered.zip'
-path_to_zip = tf.keras.utils.get_file('cats_and_dogs.zip', origin=_URL, extract=True)
-PATH = os.path.join(os.path.dirname(path_to_zip), 'cats_and_dogs_filtered')
+zip_path = tf.keras.utils.get_file("cats_and_dogs.zip", _URL, extract=True)
 
-train_dir = os.path.join(PATH, 'train')
-validation_dir = os.path.join(PATH, 'validation')
+img_gen = tf.keras.preprocessing.image.ImageDataGenerator(rescale=1./255, rotation_range=20)
+
+cvd_ds = os.path.join(os.path.dirname(zip_path), "cats_and_dogs_filtered")
+
+train_dir = os.path.join(cvd_ds, 'train')
+validation_dir = os.path.join(cvd_ds, 'validation')
 
 BATCH_SIZE = 32
 IMG_SIZE = (150, 150)
