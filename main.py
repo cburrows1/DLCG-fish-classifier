@@ -4,45 +4,29 @@ import numpy as np
 import tensorflow as tf
 from tensorflow import keras
 import matplotlib.pyplot as plt
-import tensorflow_datasets as tfds
 from tensorflow.keras import layers
-
-tfds.disable_progress_bar()
-
-train_ds, validation_ds, test_ds = tfds.load(
-    "cats_vs_dogs",
-    # Reserve 10% for validation and 10% for test
-    split=["train[:40%]", "train[40%:50%]", "train[50%:60%]"],
-    as_supervised=True,  # Include labels
-)
-
-print("Number of training samples: %d" % tf.data.experimental.cardinality(train_ds))
-print(
-    "Number of validation samples: %d" % tf.data.experimental.cardinality(validation_ds)
-)
-print("Number of test samples: %d" % tf.data.experimental.cardinality(test_ds))
+import os
 
 
-plt.figure(figsize=(10, 10))
-for i, (image, label) in enumerate(train_ds.take(9)):
-    ax = plt.subplot(3, 3, i + 1)
-    plt.imshow(image)
-    plt.title(int(label))
-    plt.axis("off")
 
+_URL = 'https://storage.googleapis.com/mledu-datasets/cats_and_dogs_filtered.zip'
+path_to_zip = tf.keras.utils.get_file('cats_and_dogs.zip', origin=_URL, extract=True)
+PATH = os.path.join(os.path.dirname(path_to_zip), 'cats_and_dogs_filtered')
 
-size = (150, 150)
+train_dir = os.path.join(PATH, 'train')
+validation_dir = os.path.join(PATH, 'validation')
 
-train_ds = train_ds.map(lambda x, y: (tf.image.resize(x, size), y))
-validation_ds = validation_ds.map(lambda x, y: (tf.image.resize(x, size), y))
-test_ds = test_ds.map(lambda x, y: (tf.image.resize(x, size), y))
+BATCH_SIZE = 32
+IMG_SIZE = (150, 150)
 
-batch_size = 32
-
-train_ds = train_ds.cache().batch(batch_size).prefetch(buffer_size=10)
-validation_ds = validation_ds.cache().batch(batch_size).prefetch(buffer_size=10)
-test_ds = test_ds.cache().batch(batch_size).prefetch(buffer_size=10)
-
+train_ds = tf.keras.utils.image_dataset_from_directory(train_dir,
+                                                            shuffle=True,
+                                                            batch_size=BATCH_SIZE,
+                                                            image_size=IMG_SIZE)
+validation_ds = tf.keras.utils.image_dataset_from_directory(validation_dir,
+                                                                 shuffle=True,
+                                                                 batch_size=BATCH_SIZE,
+                                                                 image_size=IMG_SIZE)
 
 
 data_augmentation = keras.Sequential(
