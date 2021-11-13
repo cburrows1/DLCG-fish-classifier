@@ -1,13 +1,25 @@
 # See https://keras.io/guides/transfer_learning/
 
+import os
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3' 
 import numpy as np
 import tensorflow as tf
 from tensorflow import keras
 import matplotlib.pyplot as plt
 from tensorflow.keras import layers
-import os
 
-
+gpus = tf.config.list_physical_devices('GPU')
+if gpus:
+  # Restrict TensorFlow to only allocate 1GB of memory on the first GPU
+  try:
+    tf.config.set_logical_device_configuration(
+        gpus[0],
+        [tf.config.LogicalDeviceConfiguration(memory_limit=1536)])
+    logical_gpus = tf.config.list_logical_devices('GPU')
+    print(len(gpus), "Physical GPUs,", len(logical_gpus), "Logical GPUs")
+  except RuntimeError as e:
+    # Virtual devices must be set before GPUs have been initialized
+    print(e)
 
 _URL = 'https://storage.googleapis.com/mledu-datasets/cats_and_dogs_filtered.zip'
 zip_path = tf.keras.utils.get_file("cats_and_dogs.zip", _URL, extract=True)
@@ -23,28 +35,24 @@ IMG_SIZE = (150, 150)
 train_dir = os.path.join(cvd_ds, 'train')
 validation_dir = os.path.join(cvd_ds, 'validation')
 
-def image_flow(path):
-    return img_gen.flow_from_directory(path,
-                                target_size=IMG_SIZE,
-                                batch_size=BATCH_SIZE,
-                                shuffle=True,
-                                class_mode='binary',
-                                color_mode='rgb'
-                                )
 
-train_ds = tf.data.Dataset.from_generator(
-    lambda: image_flow(train_dir), 
-    output_signature=(
-        tf.TensorSpec(shape=(32,150,150,3), dtype=tf.int32),
-        tf.TensorSpec(shape=(32,), dtype=tf.int32))
-)
+train_ds = tf.keras.utils.image_dataset_from_directory(
+  train_dir,
+  image_size=IMG_SIZE,
+  batch_size=BATCH_SIZE,
+  shuffle=True,
+  label_mode='binary',
+  color_mode='rgb'
+  )
 
-validation_ds = tf.data.Dataset.from_generator(
-    lambda: image_flow(validation_dir),
-    output_signature=(
-        tf.TensorSpec(shape=(32,150,150,3), dtype=tf.int32),
-        tf.TensorSpec(shape=(32,), dtype=tf.int32))
-)
+validation_ds = tf.keras.utils.image_dataset_from_directory(
+  validation_dir,
+  image_size=IMG_SIZE,
+  batch_size=BATCH_SIZE,
+  shuffle=True,
+  label_mode='binary',
+  color_mode='rgb'
+  )
 
 
 data_augmentation = keras.Sequential(
@@ -52,18 +60,18 @@ data_augmentation = keras.Sequential(
 )
 
 
-for images, labels in train_ds.take(1):
-    plt.figure(figsize=(10, 10))
-    first_image = images[0]
-    for i in range(9):
-        ax = plt.subplot(3, 3, i + 1)
-        augmented_image = data_augmentation(
-            tf.expand_dims(first_image, 0), training=True
-        )
-        plt.imshow(augmented_image[0].numpy().astype("int32"))
-        plt.title(int(labels[0]))
-        plt.axis("off")
-plt.show()
+# for images, labels in train_ds.take(1):
+#     plt.figure(figsize=(10, 10))
+#     first_image = images[0]
+#     for i in range(9):
+#         ax = plt.subplot(3, 3, i + 1)
+#         augmented_image = data_augmentation(
+#             tf.expand_dims(first_image, 0), training=True
+#         )
+#         plt.imshow(augmented_image[0].numpy().astype("int32"))
+#         plt.title(int(labels[0]))
+#         plt.axis("off")
+# plt.show()
 
 
 base_model = keras.applications.Xception(
@@ -103,7 +111,7 @@ model.compile(
 )
 
 epochs = 20
-model.fit(train_ds, epochs=epochs, validation_data=validation_ds)
+model.fit(train_ds, epochs=epochs, validation_data=validation_ds )
 
 # Unfreeze the base_model. Note that it keeps running in inference mode
 # since we passed `training=False` when calling it. This means that
