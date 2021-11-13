@@ -27,8 +27,8 @@ df=pd.DataFrame(df[0])
 data = df.drop(["Scientific name", "Image", "Notes"], axis=1)
 data = data.rename(columns={"Common name": "Name", "Freshwater":"Fresh","Saltwater":"salt","Non-native":"nonnative"})
 
-native_fish = list(data.query('Native=="check" & salt=="check"')['Name'])[:5]
-invasive_fish = list(data.query('nonnative=="check" & salt=="check"')['Name'])[:5]
+native_fish = list(data.query('Native=="check" & salt=="check"')['Name'])
+invasive_fish = list(data.query('nonnative=="check" & salt=="check"')['Name'])
 
 FISH_COUNT = 20
 search_append = "ocean"
