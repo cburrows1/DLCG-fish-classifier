@@ -1,12 +1,15 @@
 # See https://keras.io/guides/transfer_learning/
 
 import os
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3' 
+
 import numpy as np
 import tensorflow as tf
 from tensorflow import keras
 import matplotlib.pyplot as plt
 from tensorflow.keras import layers
+
+# supress warnings
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3' 
 
 gpus = tf.config.list_physical_devices('GPU')
 if gpus:
@@ -47,6 +50,8 @@ validation_ds = tf.keras.utils.image_dataset_from_directory(
   image_size=IMG_SIZE,
   batch_size=BATCH_SIZE,
   shuffle=True,
+  label_mode='binary',
+  color_mode='rgb',
   validation_split=0.2,
   subset="validation",
   seed=SEED
