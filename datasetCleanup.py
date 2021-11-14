@@ -8,7 +8,7 @@ for subdir, dirs, files in os.walk(path):
     for filename in files:
         filepath = subdir + os.sep + filename
         filepath_lower = filepath.lower()
-        if filepath_lower.endswith(".jpg") or filepath_lower.endswith(".png") or filepath_lower.endswith(".jpeg"):
+        if filepath_lower.endswith(".jpg") or filepath_lower.endswith(".png"):
             image_paths.append(filepath)
         elif os.path.isfile(os.path.abspath(filepath)):
             os.remove(filepath)
@@ -33,3 +33,4 @@ for img in image_paths:
         os.rename(img,img.replace(str(curr_num),str(last_num + 1)))
         print("found: " + img)
     last_num += 1
+    os.rename(img, img.lower())

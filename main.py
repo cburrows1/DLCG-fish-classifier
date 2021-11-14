@@ -21,38 +21,36 @@ if gpus:
     # Virtual devices must be set before GPUs have been initialized
     print(e)
 
-_URL = 'https://storage.googleapis.com/mledu-datasets/cats_and_dogs_filtered.zip'
-zip_path = tf.keras.utils.get_file("cats_and_dogs.zip", _URL, extract=True)
 
-img_gen = tf.keras.preprocessing.image.ImageDataGenerator()
 
-cvd_ds = os.path.join(os.path.dirname(zip_path), "cats_and_dogs_filtered")
+cvd_ds = "dataset"
 
 
 BATCH_SIZE = 16
 IMG_SIZE = (150, 150)
 
-train_dir = os.path.join(cvd_ds, 'train')
-validation_dir = os.path.join(cvd_ds, 'validation')
-
-
+dataset_dir = os.path.abspath("dataset")
 train_ds = tf.keras.utils.image_dataset_from_directory(
-  train_dir,
+  dataset_dir,
   image_size=IMG_SIZE,
   batch_size=BATCH_SIZE,
   shuffle=True,
   label_mode='binary',
-  color_mode='rgb'
-  )
+  color_mode='rgb',
+  validation_split=0.2,
+  subset="training",
+  seed=123
+)
 
 validation_ds = tf.keras.utils.image_dataset_from_directory(
-  validation_dir,
+  dataset_dir,
   image_size=IMG_SIZE,
   batch_size=BATCH_SIZE,
   shuffle=True,
-  label_mode='binary',
-  color_mode='rgb'
-  )
+  validation_split=0.2,
+  subset="validation",
+  seed=123
+)
 
 
 data_augmentation = keras.Sequential(
@@ -60,18 +58,18 @@ data_augmentation = keras.Sequential(
 )
 
 
-# for images, labels in train_ds.take(1):
-#     plt.figure(figsize=(10, 10))
-#     first_image = images[0]
-#     for i in range(9):
-#         ax = plt.subplot(3, 3, i + 1)
-#         augmented_image = data_augmentation(
-#             tf.expand_dims(first_image, 0), training=True
-#         )
-#         plt.imshow(augmented_image[0].numpy().astype("int32"))
-#         plt.title(int(labels[0]))
-#         plt.axis("off")
-# plt.show()
+for images, labels in train_ds.take(1):
+    plt.figure(figsize=(10, 10))
+    first_image = images[0]
+    for i in range(9):
+        ax = plt.subplot(3, 3, i + 1)
+        augmented_image = data_augmentation(
+            tf.expand_dims(first_image, 0), training=True
+        )
+        plt.imshow(augmented_image[0].numpy().astype("int32"))
+        plt.title(int(labels[0]))
+        plt.axis("off")
+plt.savefig("input.png")
 
 
 base_model = keras.applications.Xception(
