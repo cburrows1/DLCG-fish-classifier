@@ -10,7 +10,7 @@ from tensorflow.keras import layers
 
 gpus = tf.config.list_physical_devices('GPU')
 if gpus:
-  # Restrict TensorFlow to only allocate 1GB of memory on the first GPU
+  # Restrict TensorFlow to only allocate 1.5GB of memory on the GPU
   try:
     tf.config.set_logical_device_configuration(
         gpus[0],
@@ -23,13 +23,13 @@ if gpus:
 
 
 
-cvd_ds = "dataset"
-
+dataset_path = "dataset"
+SEED = 14322
 
 BATCH_SIZE = 16
 IMG_SIZE = (150, 150)
 
-dataset_dir = os.path.abspath("dataset")
+dataset_dir = os.path.abspath(dataset_path)
 train_ds = tf.keras.utils.image_dataset_from_directory(
   dataset_dir,
   image_size=IMG_SIZE,
@@ -39,7 +39,7 @@ train_ds = tf.keras.utils.image_dataset_from_directory(
   color_mode='rgb',
   validation_split=0.2,
   subset="training",
-  seed=123
+  seed=SEED
 )
 
 validation_ds = tf.keras.utils.image_dataset_from_directory(
@@ -49,7 +49,7 @@ validation_ds = tf.keras.utils.image_dataset_from_directory(
   shuffle=True,
   validation_split=0.2,
   subset="validation",
-  seed=123
+  seed=SEED
 )
 
 
@@ -69,8 +69,15 @@ for images, labels in train_ds.take(1):
         plt.imshow(augmented_image[0].numpy().astype("int32"))
         plt.title(int(labels[0]))
         plt.axis("off")
-plt.savefig("input.png")
+plt.savefig("input-aug.png")
 
+plt.figure(figsize=(10, 10))
+for i, (image, label) in enumerate(train_ds.take(9)):
+    ax = plt.subplot(3, 3, i + 1)
+    plt.imshow(image[0].numpy().astype("int32"))
+    plt.title(int(label[0]))
+    plt.axis("off")
+plt.savefig("input-imgs.png")
 
 base_model = keras.applications.Xception(
     weights="imagenet",  # Load weights pre-trained on ImageNet.

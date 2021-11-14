@@ -1,6 +1,6 @@
 #user added
 dataset*
-input.png
+input*.png
 output.txt
 
 # Byte-compiled / optimized / DLL files
