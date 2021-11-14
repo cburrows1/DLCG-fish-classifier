@@ -29,7 +29,7 @@ img_gen = tf.keras.preprocessing.image.ImageDataGenerator()
 cvd_ds = os.path.join(os.path.dirname(zip_path), "cats_and_dogs_filtered")
 
 
-BATCH_SIZE = 32
+BATCH_SIZE = 16
 IMG_SIZE = (150, 150)
 
 train_dir = os.path.join(cvd_ds, 'train')
