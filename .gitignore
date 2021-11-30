@@ -2,6 +2,7 @@
 dataset*
 input*.png
 output.txt
+testset
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

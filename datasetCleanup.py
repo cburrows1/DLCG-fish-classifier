@@ -1,7 +1,7 @@
 import os
 from natsort import natsorted 
 
-path = 'dataset'
+path = 'testset'
 
 
 def is_image(filename, verbose=False):
@@ -28,17 +28,6 @@ def is_image(filename, verbose=False):
 
     return False
 
-image_paths = []
-for subdir, dirs, files in os.walk(path):
-    for filename in files:
-        filepath = subdir + os.sep + filename
-        if is_image(filepath):
-            image_paths.append(filepath)
-        elif os.path.isfile(os.path.abspath(filepath)):
-            os.remove(filepath)
-            print("removed: " + filepath)
-
-
 def get_file_parts(path):
     fname = os.path.splitext(path)[0]
     file_parts = os.path.splitext( fname )
@@ -49,6 +38,17 @@ def get_file_parts(path):
     except ValueError:
         print("Invalid int at: " + path)
     return name, int(number)
+
+image_paths = []
+for subdir, dirs, files in os.walk(path):
+    for filename in files:
+        filepath = subdir + os.sep + filename
+        if is_image(filepath):
+            image_paths.append(filepath)
+        elif os.path.isfile(os.path.abspath(filepath)):
+            os.remove(filepath)
+            print("removed: " + filepath)
+
 
 
 
@@ -66,4 +66,3 @@ for img in image_paths:
     else:
         os.rename(img, img.lower())
     last_num += 1
-    

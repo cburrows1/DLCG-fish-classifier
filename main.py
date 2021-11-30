@@ -58,10 +58,26 @@ validation_ds = tf.keras.utils.image_dataset_from_directory(
 )
 
 
+from sklearn.metrics import confusion_matrix
+from sklearn.preprocessing import normalize
+def pltConfusionMatrix(results, expected):
+    conf_matrix = confusion_matrix(results, expected)
+    norm_conf_matrix = np.array([normalize(x, axis=1, norm='l1') for x in conf_matrix])
+
+    title = "Fish Classifier Confusion Matrix"
+    _, ax = plt.subplots()
+    afig = ax.matshow(norm_conf_matrix,cmap=plt.cm.RdYlGn)
+    plt.colorbar(afig)
+    ax.set_title(title)
+    for i in range(len(norm_conf_matrix)):
+        for j in range (len(norm_conf_matrix[0])):
+            c = round(norm_conf_matrix[j][i],3)
+            ax.text(i, j, str(c), va='center', ha='center')
+    plt.savefig("conf_matrix.png")
+
 data_augmentation = keras.Sequential(
     [layers.RandomFlip("horizontal"), layers.RandomRotation(0.1),]
 )
-
 
 for images, labels in train_ds.take(1):
     plt.figure(figsize=(10, 10))
@@ -120,7 +136,7 @@ model.compile(
     metrics=[keras.metrics.BinaryAccuracy()],
 )
 
-epochs = 20
+epochs = 2#0
 model.fit(train_ds, epochs=epochs, validation_data=validation_ds )
 
 # Unfreeze the base_model. Note that it keeps running in inference mode
@@ -137,5 +153,27 @@ model.compile(
     metrics=[keras.metrics.BinaryAccuracy()],
 )
 
-epochs = 10
+epochs = 0#10
 model.fit(train_ds, epochs=epochs, validation_data=validation_ds)
+
+
+test_path = "testset"
+test_dir = os.path.abspath(test_path)
+test_ds = tf.keras.utils.image_dataset_from_directory(
+    test_dir,
+    image_size=IMG_SIZE,
+    batch_size=BATCH_SIZE,
+    shuffle=True,
+    label_mode='binary',
+    color_mode='rgb'
+)
+
+results = model.evaluate(test_ds)
+print("test loss, test acc:", results)
+
+predictions = model.predict(test_ds).argmax(axis=1) #this is all zero this is the issue
+
+expected = np.concatenate([y for x, y in test_ds], axis=0).T[0]
+print(len(predictions), predictions[:100])
+print(len(expected), expected[:100])
+pltConfusionMatrix(predictions,expected)
