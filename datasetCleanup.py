@@ -4,6 +4,7 @@ from natsort import natsorted
 path = 'testset'
 
 
+# verify file is actually in an image format
 def is_image(filename, verbose=False):
 
     data = open(filename,'rb').read(10)
@@ -28,6 +29,7 @@ def is_image(filename, verbose=False):
 
     return False
 
+# get file fish name, and number
 def get_file_parts(path):
     fname = os.path.splitext(path)[0]
     file_parts = os.path.splitext( fname )
@@ -39,6 +41,7 @@ def get_file_parts(path):
         print("Invalid int at: " + path)
     return name, int(number)
 
+# create list of all image paths and remove non image files
 image_paths = []
 for subdir, dirs, files in os.walk(path):
     for filename in files:
@@ -51,7 +54,7 @@ for subdir, dirs, files in os.walk(path):
 
 
 
-
+# reorder images so the numbers increase sequentially, and lowercase all filenames
 image_paths = natsorted(image_paths)
 last_name = ""
 for img in image_paths:
@@ -67,6 +70,7 @@ for img in image_paths:
         os.rename(img, img.lower())
     last_num += 1
 
+# function to limit the amount of each fish to 7 for easier hand sorting
 def cutTo7(path):
     image_paths = []
     for subdir, dirs, files in os.walk(path):

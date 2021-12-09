@@ -7,6 +7,8 @@ from bing_image_downloader import downloader
 import os
 import shutil
 
+
+# scrape wikipedia table of all fish in florida to create pandas dataframe
 wikiurl="https://en.wikipedia.org/wiki/List_of_fishes_of_Florida"
 table_class="wikitable sortable jquery-tablesorter"
 response=requests.get(wikiurl)
@@ -24,16 +26,21 @@ for td in all_td:
 df=pd.read_html(str(fishtable))
 df=pd.DataFrame(df[0])
 
+# reformat table
 data = df.drop(["Scientific name", "Image", "Notes"], axis=1)
 data = data.rename(columns={"Common name": "Name", "Freshwater":"Fresh","Saltwater":"salt","Non-native":"nonnative"})
 
-data.to_csv("wiki_table.csv")
+# write to csv
+data.to_csv("results/wiki_table.csv")
 
+# collect list of natives and nonnatives from pandas df
 native_fish = list(data.query('Native=="check" & salt=="check"')['Name'])
 invasive_fish = list(data.query('nonnative=="check" & salt=="check"')['Name'])
 
 FISH_COUNT = 20
 search_append = "ocean"
+
+# use bing image search to download FISH_COUNT images of each fish name with the search append, and reformat directory structure.
 
 native_dir = "dataset/natives/"
 for i,fish in enumerate(native_fish):
