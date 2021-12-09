@@ -66,3 +66,21 @@ for img in image_paths:
     else:
         os.rename(img, img.lower())
     last_num += 1
+
+def cutTo7(path):
+    image_paths = []
+    for subdir, dirs, files in os.walk(path):
+        for filename in files:
+            filepath = subdir + os.sep + filename
+            if is_image(filepath):
+                image_paths.append(filepath)
+
+    image_paths = natsorted(image_paths)
+    last_name = ""
+    for img in image_paths:
+        curr_name, curr_num = get_file_parts(img)
+        if last_name != curr_name:
+            last_name = curr_name
+        if curr_num > 6:
+            os.remove(img)
+#cutTo7(path)

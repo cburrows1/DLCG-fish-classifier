@@ -4,7 +4,7 @@ from natsort import natsorted
 path = 'dataset'
 testset = 'testset'
 
-move = False
+move = True
 
 def get_file_parts(path):
     fname = os.path.splitext(path)[0]

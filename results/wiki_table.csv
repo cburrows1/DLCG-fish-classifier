@@ -1,0 +1,575 @@
+,Name,Native,nonnative,Fresh,salt
+0,African jewelfish,empty,check,check,empty
+1,African pompano,check,empty,empty,check
+2,Alewife,empty,check,check,check
+3,Alligator gar,check,empty,check,empty
+4,Almaco jack,check,empty,empty,check
+5,Amazon sailfin catfish,empty,check,check,empty
+6,Amberjack,check,empty,empty,check
+7,American butterfish,check,empty,empty,check
+8,American conger,check,empty,empty,check
+9,American Eel,check,empty,check,check
+10,American gizzard shad,check,empty,check,check
+11,American pickerel,check,empty,check,check
+12,American shad,check,empty,empty,check
+13,Amur carp,empty,check,check,empty
+14,Arabian angelfish,empty,check,empty,check
+15,Asian carp,empty,check,check,empty
+16,Asian swamp eel,empty,check,check,empty
+17,Atlantic angel shark,check,empty,empty,check
+18,Atlantic bluefin tuna,check,empty,empty,check
+19,Atlantic bonito,check,empty,empty,check
+20,Atlantic bumper,check,empty,empty,check
+21,Atlantic croaker,check,empty,empty,check
+22,Atlantic flyingfish,check,empty,empty,check
+23,Atlantic goliath grouper,check,empty,empty,check
+24,Atlantic menhaden,check,empty,empty,check
+25,Atlantic moonfish,check,empty,empty,check
+26,Atlantic needlefish,check,empty,check,check
+27,Atlantic sailfish,check,empty,empty,check
+28,Atlantic salmon,check,empty,empty,check
+29,Atlantic sharpnose shark,check,empty,empty,check
+30,Atlantic silverside,check,empty,empty,check
+31,Atlantic sixgill shark,check,empty,empty,check
+32,Atlantic spadefish,check,empty,empty,check
+33,Atlantic spanish mackerel,check,empty,empty,check
+34,Atlantic stingray,check,empty,check,check
+35,Atlantic sturgeon,check,empty,empty,check
+36,Atlantic tarpon,check,empty,check,check
+37,Atlantic thread herring,check,empty,empty,check
+38,Atlantic torpedo,check,empty,empty,check
+39,Atlantic tripletail,check,empty,empty,check
+40,Balloonfish,check,empty,empty,check
+41,Ballyhoo,check,empty,empty,check
+42,Banded butterflyfish,check,empty,empty,check
+43,Banded cichlid,empty,check,check,empty
+44,Banded leporinus,empty,check,check,empty
+45,Bandtail puffer,check,empty,empty,check
+46,Bandtail searobin,check,empty,empty,check
+47,Bank butterflyfish,check,empty,empty,check
+48,Bar jack,check,empty,empty,check
+49,Barbfish,check,empty,empty,check
+50,Barred hamlet,check,empty,empty,check
+51,Barred sorubim,empty,check,check,empty
+52,Basking shark,check,empty,empty,check
+53,Bay anchovy,check,empty,empty,check
+54,Bearded brotula,check,empty,empty,check
+55,Beaugregory,check,empty,empty,check
+56,Belted sandfish,check,empty,empty,check
+57,Bermuda blue angelfish,check,empty,empty,check
+58,Bermuda chub,check,empty,empty,check
+59,Bicolor damselfish,check,empty,empty,check
+60,Bicolour parrotfish,empty,check,empty,check
+61,Bigeye sand tiger,check,empty,empty,check
+62,Bigeye scad,check,empty,empty,check
+63,Bigeye thresher,check,empty,empty,check
+64,Bigeye tuna,check,empty,empty,check
+65,Bigeye,check,empty,empty,check
+66,Bighead carp,empty,check,check,empty
+67,Bigmouth sleeper,check,empty,empty,check
+68,Bignose shark,check,empty,empty,check
+69,Black Acara,empty,check,check,empty
+70,Black arowana,empty,check,check,empty
+71,Black carp,empty,check,check,empty
+72,Black crappie,check,empty,check,empty
+73,Black drum,check,empty,empty,check
+74,Black durgon,check,empty,empty,check
+75,Black grouper,check,empty,empty,check
+76,Black jack,check,empty,empty,check
+77,Black margate,check,empty,empty,check
+78,Black marlin,check,empty,empty,check
+79,Black seabass,check,empty,empty,check
+80,Blackbar soldierfish,check,empty,empty,check
+81,Blackcheek tonguefish,check,empty,empty,check
+82,Blackchin tilapia,empty,check,check,empty
+83,Black-ear wrasse,check,empty,empty,check
+84,Blackedge moray eel,check,empty,empty,check
+85,Blackfin cardinalfish,check,empty,empty,check
+86,Blackfin snapper,check,empty,empty,check
+87,Blackfin tuna,check,empty,empty,check
+88,Blacknose shark,check,empty,empty,check
+89,Blacktail moray eel,check,empty,empty,check
+90,Blacktail redhorse,check,empty,check,empty
+91,Blacktip shark,check,empty,empty,check
+92,Blood parrot cichlid,empty,check,check,empty
+93,blood-red jewel cichlid,empty,check,check,empty
+94,Blue angelfish,check,empty,empty,check
+95,Blue catfish,check,check,check,empty
+96,Blue chromis,check,empty,empty,check
+97,Blue hamlet,check,empty,empty,check
+98,Blue marlin,check,empty,empty,check
+99,Blue parrotfish,check,empty,empty,check
+100,Blue runner,check,empty,empty,check
+101,Blue shark,check,empty,empty,check
+102,Blue striped grunt,check,empty,empty,check
+103,Blue surgeonfish,empty,check,empty,check
+104,Blue tang,check,empty,empty,check
+105,Blue tilapia,empty,check,check,empty
+106,Bluefin killifish,check,empty,check,empty
+107,Bluefish,check,empty,empty,check
+108,Bluegill,check,empty,check,empty
+109,Bluehead wrasse,check,empty,empty,check
+110,Bluelip parrotfish,check,empty,empty,check
+111,Bluespotted cornetfish,check,empty,empty,check
+112,Bluespotted ribbontail ray,empty,check,empty,check
+113,Blue-spotted sunfish,check,empty,check,empty
+114,Bluntnose sixgill shark,check,empty,empty,check
+115,Bluntnose stingray,check,empty,empty,check
+116,Bonefish,check,empty,empty,check
+117,Bonnethead,check,empty,empty,check
+118,Bowfin,check,empty,check,empty
+119,Bridled burrfish,check,empty,empty,check
+120,Broad-striped anchovy,check,empty,empty,check
+121,Brook silverside,check,empty,check,empty
+122,Brown Bullhead,check,empty,check,empty
+123,Brown chromis,check,empty,empty,check
+124,Brown garden eel,check,empty,empty,check
+125,Brown hoplo,empty,check,check,empty
+126,Brown trout,empty,check,check,check
+127,Bucktooth parrotfish,check,empty,empty,check
+128,Buffalo trunkfish,check,empty,empty,check
+129,Bull shark,check,empty,check,check
+130,Bullet mackerel,check,empty,empty,check
+131,Bullseye snakehead,empty,check,check,empty
+132,Butter hamlet,check,empty,empty,check
+133,Butterfish,check,empty,empty,check
+134,Caesar grunt,check,empty,empty,check
+135,Cardinal soldierfish,check,empty,empty,check
+136,Caribbean chestnut moray,check,empty,empty,check
+137,Caribbean ocellated moray,check,empty,empty,check
+138,Caribbean reef shark,check,empty,empty,check
+139,Caribbean sharpnose-puffer,check,empty,empty,check
+140,Cero mackerel,check,empty,empty,check
+141,Chain dogfish,check,empty,empty,check
+142,Chain moray,check,empty,empty,check
+143,Chain pickerel,check,empty,check,check
+144,Chalk bass,check,empty,empty,check
+145,Channel Catfish,check,empty,check,empty
+146,Checkered puffer,check,empty,empty,check
+147,Cherubfish,check,empty,empty,check
+148,chocolate surgeonfish,empty,check,empty,check
+149,Choctaw bass,check,empty,check,empty
+150,Clearnose skate,check,empty,empty,check
+151,Clown featherback,empty,check,check,empty
+152,Clown goby,check,empty,empty,check
+153,Clown wrasse,check,empty,empty,check
+154,Clown wrasse,empty,check,empty,check
+155,Coastal shiner,check,empty,check,empty
+156,Cobia,check,empty,empty,check
+157,Cocoa damselfish,check,empty,empty,check
+158,Collared eel,check,empty,empty,check
+159,Colon goby,check,empty,empty,check
+160,Common carp,empty,check,check,empty
+161,Common clownfish,empty,check,empty,check
+162,Common lionfish,empty,check,empty,check
+163,Common rudd,empty,check,check,empty
+164,Common sand diver,check,empty,empty,check
+165,Common snook,check,empty,check,check
+166,Common thresher,check,empty,empty,check
+167,Conchfish,check,empty,empty,check
+168,Coney,check,empty,empty,check
+169,Convict cichlid,empty,check,check,empty
+170,Copper shark,check,empty,empty,check
+171,Cottonwick,check,empty,empty,check
+172,Cownose ray,check,empty,empty,check
+173,Creole wrasse,check,empty,empty,check
+174,Creole-fish,check,empty,empty,check
+175,Crested goby,check,empty,empty,check
+176,Crevalle Jack,check,empty,empty,check
+177,Croaking gourami,empty,check,check,empty
+178,Cuban gar,empty,check,check,empty
+179,Cuban dogfish,check,empty,empty,check
+180,Cubbyu,check,empty,empty,check
+181,Cubera snapper,check,empty,empty,check
+182,Darter goby,check,empty,empty,check
+183,Dash goby,check,empty,empty,check
+184,Diamond blenny,check,empty,empty,check
+185,Diamond killifish,check,empty,empty,check
+186,Doctorfish,empty,check,empty,check
+187,Doctorfish tang,check,empty,empty,check
+188,Dog snapper,check,empty,empty,check
+189,Dolphinfish,check,empty,empty,check
+190,Drab sole,check,empty,check,check
+191,Dusky cardinalfish,check,empty,empty,check
+192,Dusky damselfish,check,empty,empty,check
+193,Dusky pipefish,check,empty,empty,check
+194,Dusky shark,check,empty,empty,check
+195,Dusky squirrelfish,check,empty,empty,check
+196,Dwarf frogfish,check,empty,empty,check
+197,Dwarf goatfish,check,empty,empty,check
+198,Dwarf herring,check,empty,empty,check
+199,Dwarf rainbowfish,empty,check,check,empty
+200,Eastern mosquitofish,check,empty,check,empty
+201,Eastern mudminnow,check,empty,check,empty
+202,Electric eel,empty,check,check,empty
+203,Emperor angelfish,empty,check,empty,check
+204,Eyed flounder,check,empty,empty,check
+205,False pilchard,check,empty,empty,check
+206,Fat sleeper,check,empty,empty,check
+207,Finetooth shark,check,empty,empty,check
+208,Firemouth cichlid,empty,check,check,empty
+209,Flagfish,check,empty,check,empty
+210,Flamefish,check,empty,empty,check
+211,Flat needlefish,check,empty,empty,check
+212,Flathead catfish,check,empty,check,empty
+213,Flier,check,empty,check,empty
+214,Florida black bass,check,empty,check,empty
+215,Florida blenny,check,empty,empty,check
+216,Florida Gar,check,empty,check,empty
+217,Florida pompano,check,empty,empty,check
+218,Flowerhorn cichlid,empty,check,check,empty
+219,Flying gurnard,check,empty,empty,check
+220,Foureye butterflyfish,check,empty,empty,check
+221,Freckled cardinalfish,check,empty,empty,check
+222,Freckled soapfish,check,empty,empty,check
+223,French angelfish,check,empty,empty,check
+224,French grunt,check,empty,empty,check
+225,Freshwater goby,check,empty,empty,check
+226,Frilled shark,check,empty,empty,check
+227,Frillfin goby,check,empty,empty,check
+228,Fringed filefish,check,empty,empty,check
+229,Gafftopsail catfish,check,empty,empty,check
+230,Gag grouper,check,empty,empty,check
+231,Galapagos shark,check,empty,empty,check
+232,Giant cichlid,empty,check,check,empty
+233,Giant oarfish,check,empty,empty,check
+234,Glasseye snapper,check,empty,empty,check
+235,Glassy sweeper,check,empty,empty,check
+236,Golden shiner,check,empty,check,empty
+237,Golden topminnow,check,empty,check,empty
+238,Golden tilefish,check,empty,empty,check
+239,Goldentail moray,check,empty,empty,check
+240,Goldfish,empty,check,check,empty
+241,Goldline blenny,check,empty,empty,check
+242,Goldspotted eel,check,empty,empty,check
+243,Goliath grouper,check,empty,empty,check
+244,Grass carp,empty,check,check,empty
+245,Grass porgy,check,empty,empty,check
+246,Gray angelfish,check,empty,empty,check
+247,Gray snapper,check,empty,empty,check
+248,Graysby,check,empty,empty,check
+249,Great barracuda,check,empty,empty,check
+250,Great hammerhead,check,empty,empty,check
+251,Great white shark,check,empty,empty,check
+252,Greater amberjack,check,empty,empty,check
+253,Greater soapfish,check,empty,empty,check
+254,Green moray,check,empty,empty,check
+255,Green razorfish,check,empty,empty,check
+256,Green sunfish,check,check,check,empty
+257,Green swordtail,empty,check,check,empty
+258,Greenblotch parrotfish,check,empty,empty,check
+259,Grey triggerfish,check,empty,empty,check
+260,Gulf flounder,check,empty,empty,check
+261,Gulf killifish,check,empty,empty,check
+262,Gulf kingfish,check,empty,empty,check
+263,Gulf menhaden,check,empty,empty,check
+264,Gulf of Mexico fringed sole,check,empty,empty,check
+265,Gulf pipefish,check,empty,empty,check
+266,Gulf sturgeon,check,empty,empty,check
+267,Gulf surgeonfish,check,empty,empty,check
+268,Gulf toadfish,check,empty,empty,check
+269,Guppy,empty,check,check,empty
+270,Hairy blenny,check,empty,empty,check
+271,Hamlet (fish),check,empty,empty,check
+272,Hardhead catfish,check,empty,empty,check
+273,Harlequin bass,check,empty,empty,check
+274,High-hat (fish),check,empty,empty,check
+275,Highfin carpsucker,check,empty,check,empty
+276,Hogchoker,check,empty,check,check
+277,Hogfish,check,empty,empty,check
+278,Honeycomb moray,check,empty,empty,check
+279,Horned searobin,check,empty,empty,check
+280,Horse-eye jack,check,empty,empty,check
+281,Houndfish,check,empty,empty,check
+282,Hovering goby,check,empty,empty,check
+283,Humpback grouper,empty,check,empty,check
+284,Hybrid striped bass,empty,check,check,empty
+285,Indigo Hamlet,check,empty,empty,check
+286,Inshore lizardfish,check,empty,empty,check
+287,Jack Dempsey (fish),empty,check,check,empty
+288,Jack-knifefish,check,empty,empty,check
+289,Jaguar guapote,empty,check,check,empty
+290,Jolthead porgy,check,empty,empty,check
+291,Keel-jawed needlefish,check,empty,empty,check
+292,Keeltail needlefish,check,empty,empty,check
+293,Key brotula,check,empty,empty,check
+294,King mackerel,check,empty,empty,check
+295,Knobbed porgy,check,empty,empty,check
+296,Koi,empty,check,check,empty
+297,Kōhaku (fish),empty,check,check,empty
+298,Ladyfish,check,empty,empty,check
+299,Lagoon triggerfish,empty,check,empty,check
+300,Lake chubsucker,check,empty,check,empty
+301,Lancer dragonet,check,empty,empty,check
+302,Lane snapper,check,empty,empty,check
+303,Lantern bass,check,empty,empty,check
+304,Largehead hairtail,check,empty,empty,check
+305,Largemouth Bass,check,empty,check,empty
+306,Least killifish,check,empty,check,check
+307,Least puffer,check,empty,empty,check
+308,Leatherjack,check,empty,empty,check
+309,Lebranche mullet,check,empty,empty,check
+310,Lemon shark,check,empty,empty,check
+311,Leopard goby,check,empty,empty,check
+312,Lesser electric ray,check,empty,empty,check
+313,Lichen moray eel,check,empty,empty,check
+314,Lined seahorse,check,empty,empty,check
+315,Lined sole,check,empty,check,check
+316,Little tunny,check,empty,empty,check
+317,Longbill spearfish,check,empty,empty,check
+318,Longear sunfish,check,empty,check,empty
+319,Longfin damselfish,check,empty,empty,check
+320,Longfin mako shark,check,empty,empty,check
+321,Longjaw squirrelfish,check,empty,empty,check
+322,Longlure frogfish,check,empty,empty,check
+323,Longnose gar,check,empty,check,empty
+324,Longsnout butterflyfish,check,empty,empty,check
+325,Longspined porcupine fish,check,empty,empty,check
+326,Longspine squirrelfish,check,empty,empty,check
+327,Lookdown,check,empty,empty,check
+328,Lyre goby,check,empty,empty,check
+329,Mahi-mahi,check,empty,empty,check
+330,Mahogany snapper,check,empty,empty,check
+331,Mangrove snapper,check,empty,empty,check
+332,Man-of-war fish,check,empty,empty,check
+333,Manta ray,check,empty,empty,check
+334,Manytooth conger,check,empty,empty,check
+335,Marbled grouper,check,empty,empty,check
+336,Marbled moray,check,empty,empty,check
+337,Marbled puffer,check,empty,empty,check
+338,Margate,check,empty,empty,check
+339,Masked puffer,empty,check,empty,check
+340,Mayan cichlid,empty,check,check,empty
+341,Megamouth shark,check,empty,empty,check
+342,Mekong giant catfish,empty,check,check,empty
+343,Metallic lanternfish,check,empty,empty,check
+344,Midas cichlid,empty,check,check,empty
+345,Midnight parrotfish,check,empty,empty,check
+346,Mirrorwing flyingfish,check,empty,empty,check
+347,Misty grouper,check,empty,empty,check
+348,Molly miller,check,empty,empty,check
+349,Mottled conger moray,check,empty,empty,check
+350,Mottled jawfish,check,empty,empty,check
+351,Mozambique Tilapia,empty,check,check,empty
+352,Mummichog,check,empty,check,empty
+353,Mushroom scorpionfish,check,empty,empty,check
+354,Mutton hamlet,check,empty,empty,check
+355,Mutton snapper,check,empty,empty,check
+356,Naked sole,check,empty,empty,check
+357,Nassau grouper,check,empty,empty,check
+358,Neon goby,check,empty,empty,check
+359,Neon tetra,empty,check,check,empty
+360,Night sergeant,check,empty,empty,check
+361,Night shark,check,empty,empty,check
+362,Nile perch,empty,check,check,empty
+363,Nile tilapia,empty,check,check,empty
+364,Northern puffer,check,empty,empty,check
+365,Northern snakehead,empty,check,check,empty
+366,Nurse shark,check,empty,empty,check
+367,Ocean sunfish,check,empty,empty,check
+368,Ocean surgeon,check,empty,empty,check
+369,Ocean triggerfish,check,empty,empty,check
+370,Oceanic whitetip shark,check,empty,empty,check
+371,Ocellated flounder,check,empty,empty,check
+372,Ocellated frogfish,check,empty,empty,check
+373,Ocellated moray,check,empty,empty,check
+374,Okefenokee pygmy sunfish,check,empty,check,empty
+375,Orange-spine surgeonfish,empty,check,empty,check
+376,Orangespotted filefish,check,empty,empty,check
+377,Orangespotted goby,check,empty,empty,check
+378,Orinoco peacock bass,empty,check,check,empty
+379,Orinoco sailfin catfish,empty,check,check,empty
+380,Oscar (fish),empty,check,check,empty
+381,Oyster toadfish,check,empty,empty,check
+382,Peacock bass,empty,check,check,empty
+383,Peacock grouper,empty,check,empty,check
+384,Pearl cichlid,empty,check,check,empty
+385,Permit (fish),check,empty,check,check
+386,Pigfish (Redmouth grunt),check,empty,empty,check
+387,Pike topminnow,empty,check,check,empty
+388,Pinfish,check,empty,empty,check
+389,Pirambeba,empty,check,check,empty
+390,Pirarucu,empty,check,check,empty
+391,Plate fish,check,empty,empty,check
+392,Polygon moray,check,empty,empty,check
+393,Pompano dolphinfish,check,empty,empty,check
+394,Porkfish,check,empty,empty,check
+395,Princess parrotfish,check,empty,empty,check
+396,Puddingwife wrasse,check,empty,empty,check
+397,Pumpkinseed,empty,check,check,empty
+398,Purplemouth moray eel,check,empty,empty,check
+399,Queen angelfish,check,empty,empty,check
+400,Queen parrotfish,check,empty,empty,check
+401,Queen snapper,check,empty,empty,check
+402,Queen triggerfish,check,empty,empty,check
+403,Rainbow parrotfish,check,empty,empty,check
+404,Rainbow runner,check,empty,empty,check
+405,Rainbow smelt,empty,check,check,empty
+406,Rainbow trout,empty,check,check,check
+407,Red-bellied pacu,empty,check,check,empty
+408,Red-bellied piranha,empty,check,check,empty
+409,Red devil cichlid,empty,check,check,empty
+410,Red drum,check,empty,empty,check
+411,Red grouper,check,empty,empty,check
+412,Red hind,check,empty,empty,check
+413,Red lionfish,empty,check,empty,check
+414,Red porgy,check,empty,empty,check
+415,Red shiner,empty,check,check,empty
+416,Red snapper,check,empty,empty,check
+417,Red-striped eartheater,empty,check,check,empty
+418,Redband parrotfish,check,empty,empty,check
+419,Redbelly tilapia,empty,check,check,empty
+420,Redbreast sunfish,check,empty,check,empty
+421,Redbreast tilapia,empty,check,check,empty
+422,Redear sunfish,check,empty,check,empty
+423,Redface eel,check,empty,empty,check
+424,Redfin needlefish,check,empty,empty,check
+425,Redlip blenny,check,empty,empty,check
+426,Redtail catfish,empty,check,check,empty
+427,Redtail parrotfish,check,empty,empty,check
+428,Reef scorpionfish,check,empty,empty,check
+429,Reef squirrelfish,check,empty,empty,check
+430,Reef stonefish,empty,check,empty,check
+431,Rio Grande Cichlid,empty,check,check,empty
+432,Rock bass,check,empty,check,empty
+433,Rock beauty,check,empty,empty,check
+434,Rosy barb,empty,check,check,empty
+435,Rosy razorfish,check,empty,empty,check
+436,Roughtail stingray,check,empty,empty,check
+437,Round sardinella,check,empty,empty,check
+438,Round scad,check,empty,empty,check
+439,Roundel skate,check,empty,empty,check
+440,Royal gramma,empty,check,empty,check
+441,Saddled moray eel,check,empty,empty,check
+442,Sailfin catfish,empty,check,check,empty
+443,Sailfin flyingfish,check,empty,empty,check
+444,Sailfin molly,check,empty,check,empty
+445,Sailor's choice grunt,check,empty,empty,check
+446,Salvin's cichlid,empty,check,check,empty
+447,Sandbar shark,check,empty,empty,check
+448,Sand drum,check,empty,empty,check
+449,Sand perch,check,empty,empty,check
+450,Sand tiger shark,check,empty,empty,check
+451,Sand seatrout,check,empty,empty,check
+452,Sargassum triggerfish,check,empty,empty,check
+453,Saucereye porgy,check,empty,empty,check
+454,Scaled sardine,check,empty,empty,check
+455,Scalloped hammerhead,check,empty,empty,check
+456,Scamp grouper,check,empty,empty,check
+457,Schoolmaster snapper,check,empty,empty,check
+458,Scrawled cowfish,check,empty,empty,check
+459,Sea lamprey,empty,check,empty,check
+460,Sergeant major (fish),check,empty,empty,check
+461,Serra spanish mackerel,check,empty,empty,check
+462,Sharktooth moray eel,check,empty,empty,check
+463,Sharpnose sevengill shark,check,empty,empty,check
+464,Sheepshead,check,empty,empty,check
+465,Sheepshead minnow,check,empty,check,check
+466,Shoal bass,check,empty,check,empty
+467,Shortfin mako shark,check,empty,empty,check
+468,Shortnose gar,check,empty,check,empty
+469,Shy hamlet,check,empty,empty,check
+470,Siamese fighting fish,empty,check,check,empty
+471,Silk snapper,check,empty,empty,check
+472,Silky shark,check,empty,empty,check
+473,Silver arowana,empty,check,check,empty
+474,Silver carp,empty,check,check,empty
+475,Silver mullet,check,empty,check,empty
+476,Skipjack tuna,check,empty,empty,check
+477,Slender seahorse,check,empty,empty,check
+478,Slippery dick,check,empty,empty,check
+479,Small-scaled pacu,empty,check,check,empty
+480,Smalltail shark,check,empty,empty,check
+481,Smalltooth sawfish,check,empty,empty,check
+482,Smooth butterfly ray,check,empty,empty,check
+483,Smooth dogfish,check,empty,empty,check
+484,Smooth hammerhead,check,empty,empty,check
+485,Smooth puffer,check,empty,empty,check
+486,Smooth trunkfish,check,empty,empty,check
+487,Snook (Centropomidae),check,empty,empty,check
+488,Snowy grouper,check,empty,empty,check
+489,Southern kingfish,check,empty,empty,check
+490,Southern platyfish,empty,check,check,empty
+491,Southern puffer,check,empty,empty,check
+492,Southern stingray,check,empty,empty,check
+493,Spanish hogfish,check,empty,empty,check
+494,Spanish mackerel,check,empty,empty,check
+495,Speckled peacock bass,empty,check,check,empty
+496,Speckled seatrout,check,empty,empty,check
+497,Spinner shark,check,empty,empty,check
+498,Splendid toadfish,check,empty,empty,check
+499,Spot (fish),check,empty,empty,check
+500,Spottail pinfish,check,empty,empty,check
+501,Spotted bass,check,empty,check,empty
+502,Spotted drum,check,empty,empty,check
+503,Spotted eagle ray,check,empty,empty,check
+504,Spotted gar,check,empty,check,empty
+505,Spotted goatfish,check,empty,empty,check
+506,Spotted moray,check,empty,empty,check
+507,Spotted scorpionfish,empty,check,empty,check
+508,Spotted scorpionfish,check,empty,empty,check
+509,Spotted Severum,empty,check,check,empty
+510,Spotted sucker,check,empty,check,empty
+511,Spotted sunfish,check,empty,check,empty
+512,Spotted tilapia,empty,check,check,check
+513,Spotted trunkfish,check,empty,empty,check
+514,Stoplight parrotfish,check,empty,empty,check
+515,Striped bass,check,empty,check,check
+516,Striped burrfish,check,empty,empty,check
+517,Striped mullet,check,empty,empty,check
+518,Striped parrotfish,check,empty,empty,check
+519,Suckermouth catfish,empty,check,check,empty
+520,Summer flounder,check,empty,empty,check
+521,Suwannee bass,check,empty,check,empty
+522,Swamp darter,check,empty,check,check
+523,Swordfish,check,empty,empty,check
+524,Tadpole madtom,check,empty,check,empty
+525,Taillight shiner,check,empty,check,empty
+526,Tambaqui,empty,check,check,empty
+527,Threadfin shad,check,empty,check,empty
+528,Tiger grouper,check,empty,empty,check
+529,Tiger shark,check,empty,empty,check
+530,Tiger sorubim,empty,check,check,empty
+531,Tobaccofish,check,empty,empty,check
+532,Tomtate,check,empty,empty,check
+533,Trimac cichlid,empty,check,check,empty
+534,Tripletail,check,empty,empty,check
+535,Tropical gar,empty,check,check,empty
+536,Tucanare peacock bass,empty,check,check,empty
+537,Variatus platy,empty,check,check,empty
+538,Vermilion snapper,check,empty,empty,check
+539,Wahoo,check,empty,empty,check
+540,Walking catfish,empty,check,check,empty
+541,Wami tilapia,empty,check,check,empty
+542,Warmouth,check,empty,check,empty
+543,Weakfish,check,empty,empty,check
+544,Wels catfish,empty,check,check,empty
+545,Whale shark,check,empty,empty,check
+546,White bass,empty,check,check,empty
+547,White catfish,check,empty,check,empty
+548,White crappie,empty,check,check,empty
+549,White Grunt (fish),check,empty,empty,check
+550,White marlin,check,empty,empty,check
+551,White perch,empty,check,check,empty
+552,Whitespot moray,check,empty,empty,check
+553,Whitespotted surgeonfish,empty,check,empty,check
+554,Windowpane flounder,check,empty,empty,check
+555,Wolf cichlid,empty,check,check,empty
+556,Yellow bullhead,check,empty,check,empty
+557,Yellow goatfish,check,empty,empty,check
+558,Yellow jack,check,empty,empty,check
+559,Yellow perch,check,empty,check,check
+560,Yellow stingray,check,empty,empty,check
+561,Yellow tang,empty,check,empty,check
+562,Yellowedge grouper,check,empty,empty,check
+563,Yellowfin goby,empty,check,empty,check
+564,Yellowfin grouper,check,empty,empty,check
+565,Yellowfin mojarra,check,empty,empty,check
+566,Yellowfin tuna,check,empty,empty,check
+567,Yellowhead wrasse,check,empty,empty,check
+568,Yellowmouth grouper,check,empty,empty,check
+569,yellowtail damselfish,check,empty,empty,check
+570,Yellowtail parrotfish,check,empty,empty,check
+571,Yellowtail snapper,check,empty,empty,check
+572,Zebra tilapia,empty,check,check,empty
+573,empty,empty,empty,empty,empty

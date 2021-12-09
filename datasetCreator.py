@@ -27,6 +27,8 @@ df=pd.DataFrame(df[0])
 data = df.drop(["Scientific name", "Image", "Notes"], axis=1)
 data = data.rename(columns={"Common name": "Name", "Freshwater":"Fresh","Saltwater":"salt","Non-native":"nonnative"})
 
+data.to_csv("wiki_table.csv")
+
 native_fish = list(data.query('Native=="check" & salt=="check"')['Name'])
 invasive_fish = list(data.query('nonnative=="check" & salt=="check"')['Name'])
 

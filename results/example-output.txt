@@ -1,0 +1,134 @@
+1 Physical GPUs, 1 Logical GPUs
+Found 1467 files belonging to 1 classes.
+Found 114 files belonging to 1 classes.
+WARNING:tensorflow:From main.py:89: sample_from_datasets_v2 (from tensorflow.python.data.experimental.ops.interleave_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.data.Dataset.sample_from_datasets(...)`.
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_2 (InputLayer)        [(None, 150, 150, 3)]     0         
+                                                                 
+ sequential (Sequential)     (None, 100, 100, 3)       0         
+                                                                 
+ resizing (Resizing)         (None, 150, 150, 3)       0         
+                                                                 
+ rescaling (Rescaling)       (None, 150, 150, 3)       0         
+                                                                 
+ xception (Functional)       (None, 5, 5, 2048)        20861480  
+                                                                 
+ global_average_pooling2d (G  (None, 2048)             0         
+ lobalAveragePooling2D)                                          
+                                                                 
+ dropout (Dropout)           (None, 2048)              0         
+                                                                 
+ dense (Dense)               (None, 2048)              4196352   
+                                                                 
+ dropout_1 (Dropout)         (None, 2048)              0         
+                                                                 
+ dense_1 (Dense)             (None, 2048)              4196352   
+                                                                 
+ dropout_2 (Dropout)         (None, 2048)              0         
+                                                                 
+ dense_2 (Dense)             (None, 2048)              4196352   
+                                                                 
+ dense_3 (Dense)             (None, 1)                 2049      
+                                                                 
+=================================================================
+Total params: 33,452,585
+Trainable params: 12,591,105
+Non-trainable params: 20,861,480
+_________________________________________________________________
+Epoch 1/20
+178/178 [==============================] - 19s 85ms/step - loss: 0.6050 - binary_accuracy: 0.7051
+Epoch 2/20
+178/178 [==============================] - 15s 82ms/step - loss: 0.4882 - binary_accuracy: 0.7873
+Epoch 3/20
+178/178 [==============================] - 15s 82ms/step - loss: 0.3323 - binary_accuracy: 0.8653
+Epoch 4/20
+178/178 [==============================] - 15s 82ms/step - loss: 0.3712 - binary_accuracy: 0.8529
+Epoch 5/20
+178/178 [==============================] - 15s 82ms/step - loss: 0.2245 - binary_accuracy: 0.9090
+Epoch 6/20
+178/178 [==============================] - 15s 81ms/step - loss: 0.2365 - binary_accuracy: 0.9157
+Epoch 7/20
+178/178 [==============================] - 15s 81ms/step - loss: 0.2311 - binary_accuracy: 0.9026
+Epoch 8/20
+178/178 [==============================] - 15s 81ms/step - loss: 0.1843 - binary_accuracy: 0.9365
+Epoch 9/20
+178/178 [==============================] - 15s 82ms/step - loss: 0.1665 - binary_accuracy: 0.9393
+Epoch 10/20
+178/178 [==============================] - 15s 81ms/step - loss: 0.1699 - binary_accuracy: 0.9418
+Epoch 11/20
+178/178 [==============================] - 15s 82ms/step - loss: 0.1268 - binary_accuracy: 0.9552
+Epoch 12/20
+178/178 [==============================] - 15s 82ms/step - loss: 0.1462 - binary_accuracy: 0.9503
+Epoch 13/20
+178/178 [==============================] - 15s 81ms/step - loss: 0.1279 - binary_accuracy: 0.9517
+Epoch 14/20
+178/178 [==============================] - 15s 82ms/step - loss: 0.1104 - binary_accuracy: 0.9573
+Epoch 15/20
+178/178 [==============================] - 15s 81ms/step - loss: 0.1144 - binary_accuracy: 0.9563
+Epoch 16/20
+178/178 [==============================] - 15s 82ms/step - loss: 0.0984 - binary_accuracy: 0.9647
+Epoch 17/20
+178/178 [==============================] - 15s 81ms/step - loss: 0.1061 - binary_accuracy: 0.9665
+Epoch 18/20
+178/178 [==============================] - 15s 81ms/step - loss: 0.0985 - binary_accuracy: 0.9644
+Epoch 19/20
+177/178 [============================>.] - ETA: 0s - loss: 0.0876 - binary_accuracy: 0.9700main.py:39: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`).
+  f, axs = plt.subplots(1, len(logs), figsize=(15,5))
+178/178 [==============================] - 15s 82ms/step - loss: 0.0876 - binary_accuracy: 0.9700
+Epoch 20/20
+178/178 [==============================] - 15s 81ms/step - loss: 0.0944 - binary_accuracy: 0.9665
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_2 (InputLayer)        [(None, 150, 150, 3)]     0         
+                                                                 
+ sequential (Sequential)     (None, 100, 100, 3)       0         
+                                                                 
+ resizing (Resizing)         (None, 150, 150, 3)       0         
+                                                                 
+ rescaling (Rescaling)       (None, 150, 150, 3)       0         
+                                                                 
+ xception (Functional)       (None, 5, 5, 2048)        20861480  
+                                                                 
+ global_average_pooling2d (G  (None, 2048)             0         
+ lobalAveragePooling2D)                                          
+                                                                 
+ dropout (Dropout)           (None, 2048)              0         
+                                                                 
+ dense (Dense)               (None, 2048)              4196352   
+                                                                 
+ dropout_1 (Dropout)         (None, 2048)              0         
+                                                                 
+ dense_1 (Dense)             (None, 2048)              4196352   
+                                                                 
+ dropout_2 (Dropout)         (None, 2048)              0         
+                                                                 
+ dense_2 (Dense)             (None, 2048)              4196352   
+                                                                 
+ dense_3 (Dense)             (None, 1)                 2049      
+                                                                 
+=================================================================
+Total params: 33,452,585
+Trainable params: 33,398,057
+Non-trainable params: 54,528
+_________________________________________________________________
+Epoch 1/5
+178/178 [==============================] - 69s 363ms/step - loss: 0.0731 - binary_accuracy: 0.9725
+Epoch 2/5
+178/178 [==============================] - 65s 360ms/step - loss: 0.0524 - binary_accuracy: 0.9834
+Epoch 3/5
+178/178 [==============================] - 65s 361ms/step - loss: 0.0494 - binary_accuracy: 0.9852
+Epoch 4/5
+178/178 [==============================] - 65s 361ms/step - loss: 0.0477 - binary_accuracy: 0.9877
+Epoch 5/5
+178/178 [==============================] - 65s 362ms/step - loss: 0.0380 - binary_accuracy: 0.9873
+Found 697 files belonging to 1 classes.
+Found 57 files belonging to 1 classes.
+87/87 [==============================] - 7s 71ms/step - loss: 2.4465 - binary_accuracy: 0.6503
+test loss, test acc: [2.4465279579162598, 0.650253415107727]
